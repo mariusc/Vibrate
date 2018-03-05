@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,60 +24,81 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Na3-iF-p1z">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htQ-Hg-vxB">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                                        <state key="normal" title="Vibrate"/>
+                                        <connections>
+                                            <action selector="vibrate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jjk-PE-ybD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFJ-DJ-LwY">
+                                        <rect key="frame" x="0.0" y="59" width="375" height="58.5"/>
+                                        <state key="normal" title="Old style peek"/>
+                                        <connections>
+                                            <action selector="oldStylePeekPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Hu-2h-rCk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QkL-5b-gbi">
+                                        <rect key="frame" x="0.0" y="117.5" width="375" height="59"/>
+                                        <state key="normal" title="Old style pop"/>
+                                        <connections>
+                                            <action selector="oldStylePopPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jgv-Vu-ztc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8YC-bI-HQx">
+                                        <rect key="frame" x="0.0" y="176.5" width="375" height="59"/>
+                                        <state key="normal" title="Old style error"/>
+                                        <connections>
+                                            <action selector="oldStyleErrorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ExU-AN-5ur"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4z-6M-BxX">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="81"/>
+                                        <rect key="frame" x="0.0" y="235.5" width="375" height="58.5"/>
                                         <state key="normal" title="Selection changed"/>
                                         <connections>
                                             <action selector="selectionChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lv3-OL-Oyo"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWF-7M-ccb">
-                                        <rect key="frame" x="0.0" y="81" width="375" height="81"/>
+                                        <rect key="frame" x="0.0" y="294" width="375" height="59"/>
                                         <state key="normal" title="Impact occured - Light"/>
                                         <connections>
                                             <action selector="lightImpactOccurred:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zrC-uw-pUm"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRk-jT-aUu">
-                                        <rect key="frame" x="0.0" y="162" width="375" height="80.5"/>
+                                        <rect key="frame" x="0.0" y="353" width="375" height="58.5"/>
                                         <state key="normal" title="Impact occured - Medium"/>
                                         <connections>
                                             <action selector="mediumImpactOccurred:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rBh-4t-zc6"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FjI-Ch-MLw">
-                                        <rect key="frame" x="0.0" y="242.5" width="375" height="81"/>
+                                        <rect key="frame" x="0.0" y="411.5" width="375" height="59"/>
                                         <state key="normal" title="Impact occured - Heavy"/>
                                         <connections>
                                             <action selector="heavyImpactOccurred:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pT4-Pi-SxG"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBq-bu-cVd">
-                                        <rect key="frame" x="0.0" y="323.5" width="375" height="81"/>
+                                        <rect key="frame" x="0.0" y="470.5" width="375" height="59"/>
                                         <state key="normal" title="Notification occurred - Success"/>
                                         <connections>
                                             <action selector="successNotificationOccurred:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Epl-o1-bOX"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWw-Z1-LO3">
-                                        <rect key="frame" x="0.0" y="404.5" width="375" height="81"/>
+                                        <rect key="frame" x="0.0" y="529.5" width="375" height="58.5"/>
                                         <state key="normal" title="Notification occurred - Warning"/>
                                         <connections>
                                             <action selector="warningNotificationOccurred:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gdQ-iI-ACo"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFP-Ar-ME1">
-                                        <rect key="frame" x="0.0" y="485.5" width="375" height="80.5"/>
+                                        <rect key="frame" x="0.0" y="588" width="375" height="59"/>
                                         <state key="normal" title="Notification occurred - Error"/>
                                         <connections>
                                             <action selector="errorNotificationOccurred:" destination="BYZ-38-t0r" eventType="touchUpInside" id="32E-Ej-bZt"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htQ-Hg-vxB">
-                                        <rect key="frame" x="0.0" y="566" width="375" height="81"/>
-                                        <state key="normal" title="Vibrate"/>
-                                        <connections>
-                                            <action selector="vibrate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jjk-PE-ybD"/>
                                         </connections>
                                     </button>
                                 </subviews>

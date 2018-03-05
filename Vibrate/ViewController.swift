@@ -18,7 +18,23 @@ class ViewController: UIViewController {
     }
 
     // MARK: - Actions
-    
+
+	@IBAction func vibrate(_ sender: Any) {
+		AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+	}
+
+	@IBAction func oldStylePeekPressed(_ sender: Any) {
+		AudioServicesPlaySystemSound(SystemSoundID(1519))
+	}
+
+	@IBAction func oldStylePopPressed(_ sender: Any) {
+		AudioServicesPlaySystemSound(SystemSoundID(1520))
+	}
+
+	@IBAction func oldStyleErrorPressed(_ sender: Any) {
+		AudioServicesPlaySystemSound(SystemSoundID(1521))
+	}
+
     @IBAction func selectionChanged(_ sender: Any) {
         let selectionFeedbackGenerator = UISelectionFeedbackGenerator()
         selectionFeedbackGenerator.selectionChanged()
@@ -52,10 +68,6 @@ class ViewController: UIViewController {
     @IBAction func errorNotificationOccurred(_ sender: Any) {
         let errorNotificationFeedbackGenerator = UINotificationFeedbackGenerator()
         errorNotificationFeedbackGenerator.notificationOccurred(.error)
-    }
-    
-    @IBAction func vibrate(_ sender: Any) {
-        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
     }
 }
 
